@@ -27,6 +27,7 @@ mongoose.connect(config.MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser
 
 app.use(cors())
 app.use(express.static('build'))
+app.use(middleware.tokenExtractor)
 app.use(bodyParser.json())
 app.use(middleware.requestLogger)
 //app.use(middleware.tokenExtractor)

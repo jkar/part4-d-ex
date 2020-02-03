@@ -22,7 +22,7 @@ const blogSchema = new mongoose.Schema({
 
 })
 
-blogSchema.plugin(uniqueValidator, { type: 'mongoose-unique-validator' })
+blogSchema.plugin(uniqueValidator)
 
 blogSchema.set('toJSON', {
   transform: (document, returnedObject) => {
